@@ -64,7 +64,7 @@ const VendorList = () => {
               {list.map((value, i) => (
                 <div
                   key={i}
-                  className="bg-white border-[#159895] rounded-xl border-4 h-[125px] w-2/3 flex justify-between items-center p-5 gap-2"
+                  className="bg-white border-[#AEC2B6] rounded-xl border-4 h-[125px] w-2/3 flex justify-between items-center p-5 gap-2"
                 >
                   <div className="flex gap-5">
                     <div>
@@ -75,13 +75,13 @@ const VendorList = () => {
                         {value.date}
                       </h1>
                     </div>
-                    <h1 className="text-xl jose text-[#002B5B] bg-[#57C5B6] p-3 rounded-xl h-max">
+                    <h1 className="text-xl jose text-[#002B5B] bg-[#BBD6B8] p-3 rounded-xl h-max">
                       {value.tags}
                     </h1>
                   </div>
                   <button
                     onClick={() => handleAccept(value)}
-                    className="bg-[#159895] w-44 h-16  rounded-xl jose text-3xl text-[#002B5B] hover:bg-[#1A5F7A] transition-all ease-in-out duration-300"
+                    className="bg-[#BBD6B8] w-44 h-16  rounded-xl jose text-3xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300"
                   >
                     Accept
                   </button>

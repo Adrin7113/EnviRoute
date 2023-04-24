@@ -13,6 +13,36 @@ body,
   scrollbar-width: none; /* Firefox */
 }
 
+/*For Input Decoration Removal*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*Same for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Placeholder ColorChange */
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #002b5b;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #002b5b;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #002b5b;
+}
+
 .jose {
   font-family: "Josefin Sans", sans-serif;
 }

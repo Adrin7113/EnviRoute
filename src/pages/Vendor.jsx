@@ -44,16 +44,16 @@ const Vendor = () => {
         <input
           placeholder="Email"
           type="text"
-          className={`bg-[#159895] border-4 mb-5 w-1/2 h-16 pl-5  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#1A5F7A] transition-all ease-in-out duration-300 ${
-            loginError ? "border-red-700" : "border-[#159895]"
+          className={`bg-[#BBD6B8] border-4 mb-5 w-1/2 h-16 pl-5  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 ${
+            loginError ? "border-red-700" : "border-[#AEC2B6]"
           }`}
         ></input>
         <input
           placeholder="Password"
           type="password"
           id="password"
-          className={`bg-[#159895] border-4 mb-5 w-1/2 h-16 pl-5  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#1A5F7A] transition-all ease-in-out duration-300 ${
-            loginError ? "border-red-700" : "border-[#159895]"
+          className={`bg-[#BBD6B8]] border-4 mb-5 w-1/2 h-16 pl-5  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 ${
+            loginError ? "border-red-700" : "border-[#AEC2B6]"
           }`}
         ></input>
         <h1
@@ -67,7 +67,7 @@ const Vendor = () => {
             await login();
             console.log(auth);
           }}
-          className="bg-[#159895] w-1/3 h-16  rounded-xl jose text-3xl text-[#002B5B] hover:bg-[#1A5F7A] transition-all ease-in-out duration-300"
+          className="bg-[#BBD6B8] w-1/3 h-16  rounded-xl jose text-3xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300"
         >
           Submit
         </button>
