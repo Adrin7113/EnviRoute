@@ -23,11 +23,11 @@ const Loading = () => {
     onRender();
   }, []);
   return (
-    <div className="fixed top-0 bg-white h-screen w-screen">
+    <div className="fixed top-0 bg-white h-screen w-screen sm:hidden">
       <div className="w-full h-full flex flex-col justify-center items-center">
         <h1 className="text-7xl jose text-[#002B5B]">EnviRoute</h1>
         <h1 className="text-2xl text-[#002B5B]">From Waste To Wellness</h1>
-        <div className="w-1/3 h-44 relative">
+        <div className="w-1/3 h-44 relative sm:w-full">
           <img
             src={"/trash.png"}
             id="trash"
@@ -38,7 +38,7 @@ const Loading = () => {
             src={"/recycle.png"}
             id="recycle"
             alt="Represents recycling."
-            className="w-36 h-20 absolute top-10 left-44 transition-all ease-in-out duration-1000 "
+            className="w-36 h-20 absolute top-10 left-44 sm:left-28 transition-all ease-in-out duration-1000 "
           />
           <img
             src={"/heart.png"}

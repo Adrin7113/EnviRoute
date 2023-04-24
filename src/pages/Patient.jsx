@@ -36,36 +36,36 @@ const Patient = () => {
             placeholder="Name"
             type="text"
             id="name"
-            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
+            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 sm:w-full h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
           ></input>
           <input
             placeholder="Age"
             type="number"
             id="age"
-            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
+            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 sm:w-full h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
           ></input>
           <input
             placeholder="Address"
             type="text"
             id="address"
-            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
+            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 sm:w-full h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
           ></input>
           <input
             placeholder="Contact Number"
             type="number"
             id="cnum"
-            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
+            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 sm:w-full h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
           ></input>
           <input
             placeholder="Critical?(Yes/No)"
             type="text"
             id="critical"
-            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
+            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 sm:w-full h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
           ></input>
 
           <button
             id="submit"
-            className={`bg-[#BBD6B8]  placeholder-white w-1/2 h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 flex items-center`}
+            className={`bg-[#BBD6B8]  placeholder-white w-1/2 sm:w-full h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 flex items-center`}
             onClick={() => handleSubmit()}
           >
             Submit

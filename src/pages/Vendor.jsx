@@ -33,9 +33,9 @@ const Vendor = () => {
   };
 
   return (
-    <div className="min-h-screen flex ">
+    <div className="min-h-screen flex w-screen">
       {auth && navigate("/vendor/list", { state: data[0] })}
-      <div className="w-1/2 min-h-screen  flex justify-center items-center flex-col">
+      <div className="w-full min-h-screen  flex justify-center items-center flex-col">
         <h1 className="text-7xl jose text-[#002B5B]">EnviRoute</h1>
         <h1 className="text-2xl text-[#002B5B] pb-16">
           From Waste To Wellness
@@ -44,7 +44,7 @@ const Vendor = () => {
         <input
           placeholder="Email"
           type="text"
-          className={`bg-[#BBD6B8] border-4 mb-5 w-1/2 h-16 pl-5  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 ${
+          className={`bg-[#BBD6B8] border-4 mb-5 w-1/3 sm:w-1/2 h-16 pl-5  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 ${
             loginError ? "border-red-700" : "border-[#AEC2B6]"
           }`}
         ></input>
@@ -52,7 +52,7 @@ const Vendor = () => {
           placeholder="Password"
           type="password"
           id="password"
-          className={`bg-[#BBD6B8] border-4 mb-5 w-1/2 h-16 pl-5  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 ${
+          className={`bg-[#BBD6B8] border-4 mb-5 w-1/3 sm:w-1/2 h-16 pl-5  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 ${
             loginError ? "border-red-700" : "border-[#AEC2B6]"
           }`}
         ></input>
@@ -72,7 +72,6 @@ const Vendor = () => {
           Submit
         </button>
       </div>
-      <div className="w-1/2 min-h-screen"></div>
     </div>
   );
 };

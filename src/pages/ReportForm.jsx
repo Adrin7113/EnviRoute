@@ -29,11 +29,18 @@ const ReportForm = () => {
             id="report"
             cols="50"
             rows="10"
-            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
+            className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 sm:hidden`}
+          ></textarea>
+          <textarea
+            placeholder="Enter Your Report"
+            id="report"
+            cols="50"
+            rows="15"
+            className={`hidden sm:block bg-[#BBD6B8] placeholder-white mb-5 w-5/6 mx-2 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300`}
           ></textarea>
           <button
             id="submit"
-            className={`bg-[#BBD6B8]  placeholder-white w-1/6 h-16 pl-3 rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 flex items-center`}
+            className={`bg-[#BBD6B8]  placeholder-white w-1/6 sm:w-1/2 h-16 pl-3 rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 flex items-center`}
             onClick={() => handleSubmit()}
           >
             Submit

@@ -64,7 +64,7 @@ const VendorList = () => {
               {list.map((value, i) => (
                 <div
                   key={i}
-                  className="bg-white border-[#AEC2B6] rounded-xl border-4 h-[125px] w-2/3 flex justify-between items-center p-5 gap-2"
+                  className="bg-white border-[#AEC2B6] rounded-xl border-4 h-[125px] w-2/3 flex sm:flex-col sm:justify-center sm:h-[300px] sm:w-full justify-between items-center p-5 gap-2"
                 >
                   <div className="flex gap-5">
                     <div>

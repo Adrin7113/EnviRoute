@@ -8,6 +8,7 @@ const InstituteData = () => {
   const { state } = useLocation();
   const auth = state;
   const [show, setShow] = useState(false);
+  const [submitText, setSubmitText] = useState("Submit");
   const handleSubmit = async () => {
     const date = document.getElementById("date").value;
     const { error } = await supabase.from("InstitutesData").insert({
@@ -19,6 +20,10 @@ const InstituteData = () => {
     });
     if (error) {
       console.log(error);
+    } else {
+      setSubmitText("Submitted");
+      const submitText = document.getElementById("submitText");
+      submitText.classList.add("opacity-0");
     }
   };
   const [instituteData, setInstituteData] = useState(null);
@@ -39,11 +44,11 @@ const InstituteData = () => {
     onRender();
   }, [auth.name]);
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex sm:flex-col">
       {auth && (
         <>
-          <div className="w-1/2 flex flex-col  items-center mt-28">
-            <h1 className="text-5xl jose text-[#002B5B] mb-10 underline  decoration-[#002B5B] underline-offset-[12px]">
+          <div className="w-1/2 sm:w-full flex flex-col  items-center mt-28">
+            <h1 className="text-5xl sm:text-center jose text-[#002B5B] mb-10 underline  decoration-[#002B5B] underline-offset-[12px]">
               Enter A New Request
             </h1>
             <input
@@ -52,18 +57,6 @@ const InstituteData = () => {
               id="date"
               className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 `}
             ></input>
-            <input
-              id="Image"
-              placeholder="Upload Image"
-              type="file"
-              className={`hidden`}
-            ></input>
-            <label
-              htmlFor="Image"
-              className={`bg-[#BBD6B8] placeholder-white mb-5 w-1/2 h-16 pl-3  rounded-xl jose text-xl text-white hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 flex items-center `}
-            >
-              Upload Image
-            </label>
             <div className="w-1/2 relative">
               <button
                 onClick={() => setShow(!show)}
@@ -167,14 +160,15 @@ const InstituteData = () => {
               )}
             </div>
             <button
+              id="submitText"
               className={`bg-[#BBD6B8] mt-5 placeholder-white mb-5 w-1/2 h-16 pl-3  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300 flex items-center`}
               onClick={() => handleSubmit()}
             >
-              Submit
+              {submitText}
             </button>
           </div>
-          <div className="w-1/2 flex flex-col mt-28">
-            <h1 className="text-5xl jose text-[#002B5B] mb-10 underline  decoration-[#002B5B] underline-offset-[12px]">
+          <div className="w-1/2 sm:w-full flex flex-col mt-28">
+            <h1 className="text-5xl sm:text-center jose text-[#002B5B] mb-10 underline  decoration-[#002B5B] underline-offset-[12px]">
               Previous Requests
             </h1>
 
@@ -183,7 +177,7 @@ const InstituteData = () => {
                 {instituteData.map((value, i) => (
                   <div
                     key={i}
-                    className="h-[100px] w-2/3 flex items-center p-5 bg-white border-4 border-[#AEC2B6] rounded-xl mb-5 gap-5"
+                    className="h-[100px] w-2/3 sm:h-[200px] sm:w-full flex items-center p-5 bg-white border-4 border-[#AEC2B6] rounded-xl mb-5 gap-5"
                   >
                     <div>
                       <h1 className="text-3xl jose text-[#002B5B]">
