@@ -32,19 +32,19 @@ const Loading = () => {
             src={"/trash.png"}
             id="trash"
             alt="Represents trash."
-            className="w-16 h-16 absolute top-10 left-10 transition-all ease-in-out duration-1000"
+            className="w-20 h-20 absolute top-10 left-10 transition-all ease-in-out duration-1000"
           />
           <img
             src={"/recycle.png"}
             id="recycle"
             alt="Represents recycling."
-            className="w-16 h-16 absolute top-10 left-56 transition-all ease-in-out duration-1000 "
+            className="w-36 h-20 absolute top-10 left-44 transition-all ease-in-out duration-1000 "
           />
           <img
             src={"/heart.png"}
             id="heart"
             alt="Represents a heart(idk)?."
-            className="w-16 h-16 absolute top-10 left-56 opacity-0 transition-all ease-in-out duration-1000"
+            className="w-28 h-28 absolute top-6 left-56 opacity-0 transition-all ease-in-out duration-1000"
           />
         </div>
       </div>
