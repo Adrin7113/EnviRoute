@@ -75,101 +75,93 @@ const InstituteData = () => {
                 <div className="absolute h-44 z-20 mt-2 w-full overflow-y-auto scrollbar">
                   <div
                     onClick={() => {
-                      if (!tagsState.includes("Tag1 ")) {
-                        tags.push("Tag1 ");
+                      if (!tagsState.includes("Papers ")) {
+                        tags.push("Papers ");
                         setTagsState(tags);
                       } else {
-                        tags.pop("Tag1 ");
+                        const index = tags.indexOf("Papers ");
+                        tags.splice(index, 1);
                         setTagsState(tags);
                       }
                     }}
                     className="bg-[#159895] w-full border-2 border-black pl-5 text-xl jose"
                   >
-                    Tag1
+                    Papers
                   </div>
                   <div
                     onClick={() => {
-                      if (!tagsState.includes("Tag2 ")) {
-                        tags.push("Tag2 ");
+                      if (!tagsState.includes("Notebooks ")) {
+                        tags.push("Notebooks ");
                         setTagsState(tags);
                       } else {
-                        tags.pop("Tag2 ");
+                        const index = tags.indexOf("Notebooks ");
+                        tags.splice(index, 1);
                         setTagsState(tags);
                       }
                     }}
                     className="bg-[#159895] w-full border-2 border-black pl-5 text-xl jose"
                   >
-                    Tag2
+                    Notebooks
                   </div>
                   <div
                     onClick={() => {
-                      if (!tagsState.includes("Tag3 ")) {
-                        tags.push("Tag3 ");
+                      if (!tagsState.includes("Plastic-Bottles ")) {
+                        tags.push("Plastic-Bottles ");
                         setTagsState(tags);
                       } else {
-                        tags.pop("Tag3 ");
+                        const index = tags.indexOf("Plastic-Bottles ");
+                        tags.splice(index, 1);
                         setTagsState(tags);
                       }
                     }}
                     className="bg-[#159895] w-full border-2 border-black pl-5 text-xl jose"
                   >
-                    Tag3
+                    Plastic Bottles
                   </div>
                   <div
                     onClick={() => {
-                      if (!tagsState.includes("Tag4 ")) {
-                        tags.push("Tag4 ");
+                      if (!tagsState.includes("Glass ")) {
+                        tags.push("Glass ");
                         setTagsState(tags);
                       } else {
-                        tags.pop("Tag4 ");
+                        const index = tags.indexOf("Glass ");
+                        tags.splice(index, 1);
                         setTagsState(tags);
                       }
                     }}
                     className="bg-[#159895] w-full border-2 border-black pl-5 text-xl jose"
                   >
-                    Tag4
+                    Glass
                   </div>
                   <div
                     onClick={() => {
-                      if (!tagsState.includes("Tag5 ")) {
-                        tags.push("Tag5 ");
+                      if (!tagsState.includes("E-Waste ")) {
+                        tags.push("E-Waste ");
                         setTagsState(tags);
                       } else {
-                        tags.pop("Tag5 ");
+                        const index = tags.indexOf("E-Waste ");
+                        tags.splice(index, 1);
                         setTagsState(tags);
                       }
                     }}
                     className="bg-[#159895] w-full border-2 border-black pl-5 text-xl jose"
                   >
-                    Tag5
+                    E-Waste
                   </div>
                   <div
                     onClick={() => {
-                      if (!tagsState.includes("Tag6 ")) {
-                        tags.push("Tag6 ");
+                      if (!tagsState.includes("Cardboard ")) {
+                        tags.push("Cardboard ");
                         setTagsState(tags);
                       } else {
-                        tags.pop("Tag6 ");
+                        const index = tags.indexOf("Cardboard ");
+                        tags.splice(index, 1);
                         setTagsState(tags);
                       }
                     }}
                     className="bg-[#159895] w-full border-2 border-black pl-5 text-xl jose"
                   >
-                    Tag6
-                  </div>
-                  <div
-                    onClick={() => {
-                      if (!tagsState.includes("Tag7 ")) {
-                        tags.push("Tag7 ");
-                        setTagsState(tags);
-                      } else {
-                        tags.pop("Tag7 ");
-                        setTagsState(tags);
-                      }
-                    }}
-                    className="bg-[#159895] w-full border-2 border-black pl-5 text-xl jose"
-                  >
-                    Tag7
+                    Cardboard
                   </div>
                 </div>
               )}
