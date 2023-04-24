@@ -52,7 +52,7 @@ const Report = () => {
           }}
           className="bg-[#BBD6B8] w-1/3 h-16  rounded-xl jose text-3xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300"
         >
-          Send OTP
+          Submit
         </button>
       </div>
     </div>
