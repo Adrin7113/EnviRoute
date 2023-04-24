@@ -1,6 +1,6 @@
 const Landing = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center gap-5">
+    <div className="min-h-screen flex flex-col justify-center items-center gap-5 ">
       <h1 className="text-7xl jose text-[#002B5B]">EnviRoute</h1>
 
       <h1 className="text-2xl text-[#002B5B]">Who are you: </h1>
@@ -15,12 +15,17 @@ const Landing = () => {
             Vendors
           </button>
         </a>
-        <a href="/patient">
+        <a href="/hospital">
           <button className="bg-[#BBD6B8] w-56 h-16 rounded-2xl jose text-3xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300">
-            Patients
+            Hospitals
           </button>
         </a>
       </div>
+      <a href="/report">
+        <h1 className="text-2xl text-[#002B5B] hover:decoration-[#002B5B] underline underline-offset-8 decoration-transparent transition ease-in-out duration-500 cursor-pointer">
+          Report an issue!
+        </h1>
+      </a>
     </div>
   );
 };

@@ -5,8 +5,17 @@ import Vendor from "./pages/Vendor";
 import Patient from "./pages/Patient";
 import InstituteData from "./pages/InstituteData";
 import VendorList from "./pages/VendorList";
+import { useEffect, useState } from "react";
+import Loading from "./pages/Loading";
+import Hospital from "./pages/Hospital";
+import Report from "./pages/Report";
+import ReportForm from "./pages/ReportForm";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 4000);
+  }, []);
   return (
     <>
       <div className="bg-hero bg-intro bg-cover bg-center bg-no-repeat w-full h-auto">
@@ -16,6 +25,7 @@ function App() {
               path="/"
               element={
                 <>
+                  {loading && <Loading />}
                   <Landing />
                 </>
               }
@@ -53,10 +63,34 @@ function App() {
               }
             />
             <Route
-              path="/patient"
+              path="/hospital"
+              element={
+                <>
+                  <Hospital />
+                </>
+              }
+            />
+            <Route
+              path="/hospital/patient"
               element={
                 <>
                   <Patient />
+                </>
+              }
+            />
+            <Route
+              path="/report"
+              element={
+                <>
+                  <Report />
+                </>
+              }
+            />
+            <Route
+              path="/report/form"
+              element={
+                <>
+                  <ReportForm />
                 </>
               }
             />

@@ -3,7 +3,7 @@ import { supabase } from "../js/supabaseClient";
 import sha256 from "crypto-js/sha256";
 import Base64 from "crypto-js/enc-base64";
 import { useNavigate } from "react-router-dom";
-const Vendor = () => {
+const Hospital = () => {
   // const delay = (delayInms) => {
   //   return new Promise((resolve) => setTimeout(resolve, delayInms));
   // };
@@ -15,7 +15,7 @@ const Vendor = () => {
     const password = document.getElementById("password");
     const hash = Base64.stringify(sha256(password.value));
     const { data, error } = await supabase
-      .from("Vendors")
+      .from("Hospitals")
       .select("*")
       .eq("password", hash);
     if (data[0]) {
@@ -34,7 +34,7 @@ const Vendor = () => {
 
   return (
     <div className="min-h-screen flex ">
-      {auth && navigate("/vendor/list", { state: data[0] })}
+      {auth && navigate("/hospital/patient", { state: data[0] })}
       <div className="w-1/2 min-h-screen  flex justify-center items-center flex-col">
         <h1 className="text-7xl jose text-[#002B5B]">EnviRoute</h1>
         <h1 className="text-2xl text-[#002B5B] pb-16">
@@ -77,4 +77,4 @@ const Vendor = () => {
   );
 };
 
-export default Vendor;
+export default Hospital;
