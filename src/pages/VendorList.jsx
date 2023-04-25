@@ -78,7 +78,7 @@ const VendorList = () => {
           </h1>
           <div className="w-1/2 sm:w-2/3 h-32 mb-5">
             <input
-              placeholder="Search By District"
+              placeholder="Search By Tags"
               type="text"
               id="search"
               className={`bg-[#BBD6B8] border-4 mb-5 w-full h-16 pl-5  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300`}
