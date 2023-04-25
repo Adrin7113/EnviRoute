@@ -6,6 +6,7 @@ const VendorList = () => {
   const { state } = useLocation();
   const auth = state;
   const [list, setList] = useState(null);
+  const [listF, setListF] = useState(false);
   const [accept, setAccept] = useState(false);
   useEffect(() => {
     const onRender = async () => {
@@ -52,6 +53,22 @@ const VendorList = () => {
       setAccept(!accept);
     }
   };
+  const handleSearch = async () => {
+    const search = document.getElementById("search").value;
+    console.log(list);
+    for (let i = 0; i < list.length; i++) {
+      if (list[i].tags.includes(`${search} `)) {
+        console.log("Works");
+      } else {
+        list.splice(i, 1);
+        i--;
+      }
+    }
+    setList(list);
+    console.log(list);
+    console.log(listF);
+    setListF(!listF);
+  };
   return (
     <>
       {auth && (
@@ -59,6 +76,20 @@ const VendorList = () => {
           <h1 className="text-5xl jose text-[#002B5B] mb-10 underline  decoration-[#002B5B] underline-offset-[12px]">
             Available Offers
           </h1>
+          <div className="w-1/2 sm:w-2/3 h-32 mb-5">
+            <input
+              placeholder="Search By District"
+              type="text"
+              id="search"
+              className={`bg-[#BBD6B8] border-4 mb-5 w-full h-16 pl-5  rounded-xl jose text-xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300`}
+            ></input>
+            <button
+              onClick={() => handleSearch()}
+              className="bg-[#BBD6B8] w-1/3 sm:w-2/3 sm:p-2 h-16 rounded-xl jose text-3xl text-[#002B5B] hover:bg-[#AEC2B6] transition-all ease-in-out duration-300"
+            >
+              Search
+            </button>
+          </div>
           {list && (
             <>
               {list.map((value, i) => (
